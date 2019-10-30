@@ -1,4 +1,4 @@
-#include "skyelib.h"
+#include "skyelib.hpp"
 std::vector<std::string> toolkit::splitString(std::string inpt){
 	std::string buf;
 	std::stringstream ss(inpt);
@@ -16,5 +16,4 @@ int toolkit::getRand(int start, int end){
 	std::uniform_int_distribution<> distr(start,end);
 	return distr(eng);
 }
-
 
