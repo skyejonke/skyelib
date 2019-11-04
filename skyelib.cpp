@@ -11,10 +11,15 @@ std::vector<std::string> toolkit::splitString(std::string inpt){
 }
 
 int toolkit::getRand(int start, int end){
-	std::random_device rd;
-	std::mt19937 eng(rd());
-	std::uniform_int_distribution<> distr(start,end);
-	return distr(eng);
+	if (start == end){
+		return start;
+	}
+	else{
+		std::random_device rd;
+		std::mt19937 eng(rd());
+		std::uniform_int_distribution<> distr(start,end);
+		return distr(eng);
+	}
 }
 
 void toolkit::replace(std::string& str,
