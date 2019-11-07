@@ -11,6 +11,12 @@ class toolkit{
 		void replace(std::string& str,
 			const std::string& oldStr,
 			const std::string& newStr);
+	private:
+		bool randInitialized = false;
+		typedef std::mt19937 MyRNG;  // the Mersenne Twister with a popular choice of parameters
+		uint32_t seed_val;           // populate somehow
+		MyRNG rng;
+
 };
 
 #endif

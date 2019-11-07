@@ -11,14 +11,17 @@ std::vector<std::string> toolkit::splitString(std::string inpt){
 }
 
 int toolkit::getRand(int start, int end){
+	if (!randInitialized){
+		rng.seed((unsigned) time(0));
+		randInitialized=true;
+	}
 	if (start == end){
 		return start;
 	}
 	else{
-		std::random_device rd;
-		std::mt19937 eng(rd());
-		std::uniform_int_distribution<> distr(start,end);
-		return distr(eng);
+		std::uniform_int_distribution<uint32_t> distr(start,end);
+		//std::uniform_int_distribution<> distr(start,end);
+		return distr(rng);
 	}
 }
 
