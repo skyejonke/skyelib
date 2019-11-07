@@ -6,8 +6,8 @@
 #include <random>
 class toolkit{
 	public:
-		std::vector<std::string> splitString(std::string inpt);
-		int getRand(int start, int end);
+		std::vector<std::string> splitString(const std::string inpt);
+		int getRand(const int start, const int end);
 		void replace(std::string& str,
 			const std::string& oldStr,
 			const std::string& newStr);
