@@ -4,6 +4,11 @@
 #include <vector>
 #include <sstream>
 #include <random>
+namespace skyelib{
+	void replace(std::string& str,
+			const std::string& oldStr,
+			const std::string& newStr);
+}
 class toolkit{
 	public:
 		std::vector<std::string> splitString(const std::string inpt);
