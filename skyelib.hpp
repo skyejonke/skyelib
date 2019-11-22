@@ -4,7 +4,6 @@
 #include <vector>
 #include <sstream>
 #include <random>
-
 namespace skyelib{
 	void replace(std::string& str,
 			const std::string& oldStr,
