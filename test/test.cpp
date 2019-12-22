@@ -9,6 +9,5 @@ TEST_CASE("basic skyelib tests", "[skyelib]"){
 	string testString = "I like <food>.";
 	tools->replace(testString,"<food>","pie");
 	REQUIRE(testString == "I like pie.");
-
 }
 

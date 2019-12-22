@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
-project(skyelib LANGUAGES CXX VERSION 1.0.0)
+project(skyelib LANGUAGES CXX VERSION 1.1.0)
 SET(GCC_COVERAGE_COMPILE_FLAGS "-Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wpedantic")
 add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
 add_library(skyelib STATIC skyelib.cpp)
 add_executable(skyeLibTests test/test.cpp)
 target_link_libraries(skyeLibTests skyelib)
-find_package(Catch2 REQUIRED)
 
 enable_testing()
 add_test(NAME skyelibTest COMMAND skyeLibTests)
