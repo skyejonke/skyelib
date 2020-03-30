@@ -5,9 +5,9 @@
 
 using namespace std;
 TEST_CASE("basic skyelib tests", "[skyelib]"){
-	toolkit* tools = new toolkit();
+        skyelib::toolkit* toold = new skyelib::toolkit();
 	string testString = "I like <food>.";
-	tools->replace(testString,"<food>","pie");
+	toold->replace(testString,"<food>","pie");
 	REQUIRE(testString == "I like pie.");
 }
 
